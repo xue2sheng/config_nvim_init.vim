@@ -20,18 +20,13 @@ set expandtab
 
 " =============== plugins =========================
 
+" call plug#begin('~\AppData\Local\nvim\plugged')
 call plug#begin('~/.config/nvim/plugged')
 
 " =============== rust =======================
 
 " autocomplete
-#if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-#else
-#  Plug 'Shougo/deoplete.nvim'
-#  Plug 'roxma/nvim-yarp'
-#  Plug 'roxma/vim-hug-neovim-rpc'
-#endif
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Language Server Client
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
